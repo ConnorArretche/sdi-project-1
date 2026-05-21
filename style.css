@@ -1,0 +1,107 @@
+
+body {
+    background-color: #121214;
+    color: #ffffff;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+#header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    padding: 10px 20px;
+    border: 1px solid #2a2a30;
+}
+
+.logo-group{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 40px;
+    margin-left: 50px;
+}
+
+.material-symbols-outlined{
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  color: #85bb65;
+
+}
+
+#name{
+    margin: 0;
+}
+
+#table-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    gap: 20px;
+}
+
+.coins-table th{
+    color: #ffffff;
+    background-color: #36363e;
+    padding: 10px 20px;
+    width: 25%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.table-card{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 30%;
+    background-color: #1a1a1e;
+    border: 1px solid #2a2a30;
+    padding: 20px 0px;
+    border-radius: 8px;
+}
+
+.top-table{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    min-height: 28px;
+}
+
+.table-caption{
+    color: #ffffff;
+    margin: 0px;
+}
+
+#add-coin-btn{
+    margin: 0px;
+    background-color: #121214;
+    border: 1px solid #3a3a42;
+    padding: 6px 12px;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 12px;
+
+}
+
+.coins-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+
+.gainer-text{
+     color: #85bb65;
+}
+
+.loser-text{
+    color: red;
+}
