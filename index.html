@@ -21,61 +21,166 @@
     </header>
 
     <div id="table-container">
+        <div class="dashboard-col col-wide">
+            <div id="my-watchlist" class="table-card">
+                <div class="top-table">
+                    <h4 class="table-caption">My Watchlist</h4>
+                    <div class="search-box">
+                        <input type="text" id="watchlist-input" placeholder="BTC, ETH, etc...">
+                        <button class="add-coin-btn" id="add-btn">+ Add Coin</button>
+                    </div>
+                    </div>
 
-        <div id="my-watchlist" class="table-card">
-            <div class="top-table">
-                <h4 class="table-caption">My Watchlist</h4>
-                <button id="add-coin-btn">+ Add Coin</button>
-            </div>
-
-            <table class="coins-table">
-                <thead>
-                    <tr>
-                        <th>Asset</th>
-                        <th>Price</th>
-                        <th>Volume</th>
-                        <th>24H%</th>
-                    </tr>
-                </thead>
-                <tbody id="watchlist-body">
-                </tbody>
-            </table>
-            </div>
-
-            <div id="high-ticker" class="table-card">
-                <div>
-                    <h4 class="table-caption">TOP LEADERS</h4>
+                <div class="table-headers">
+                    <table class="coins-table">
+                        <thead>
+                            <tr>
+                                <th>Asset</th>
+                                <th>Price</th>
+                                <th>Volume</th>
+                                <th>24H%</th>
+                            </tr>
+                        </thead>
+                        <tbody id="watchlist-body"></tbody>
+                    </table>
                 </div>
-                <table class="coins-table">
-                    <thead>
-                        <tr>
-                            <th>Asset</th>
-                            <th>Price</th>
-                            <th>Volume</th>
-                            <th>24H%</th>
-                        </tr>
-                    </thead>
-                    <tbody id="gainers-body"></tbody>
-                </table>
             </div>
-            <div id="low-ticker" class="table-card">
-                <div>
-                    <h4 class="table-caption">TOP LOSERS</h4>
+
+            <div id="research-block" class="table-card">
+                <div class="top-table-search">
+                    <h3 class="table-caption">Asset Profile Analytics</h3>
+                    <div class="search-box">
+                        <input type="text" id="ticker-search-inp" placeholder="BTC, ETH, etc...">
+                        <button id="search-btn">Search</button>
+                    </div>
                 </div>
-                <table class="coins-table">
-                    <thead>
-                        <tr>
-                            <th>Asset</th>
-                            <th>Price</th>
-                            <th>Volume</th>
-                            <th>24H%</th>
-                        </tr>
-                    </thead>
-                    <tbody id="losers-body"></tbody>
-                </table>
+                <div class="data-grid">
+                    <div class="inspect-panel">
+                        <h3 class="panel-title">Valuation & History</h3>
+                        <div class="stat-row">
+                            <div>Asset Name:</div>
+                            <div id="inspect-name">---</div>
+                        </div>
+                        <div class="stat-row">
+                            <div>Price:</div>
+                            <div id="inspect-price">---</div>
+                        </div>
+                        <div class="stat-row">
+                            <div>Global Rank:</div>
+                            <div id="inspect-rank">---</div>
+                        </div>
+                        <div class="stat-row">
+                            <div>24H % Change</div>
+                            <div id="inspect-change">---</div>
+                        </div>
+                        <div class="stat-row">
+                            <div>Market Cap (USD):</div>
+                            <div id="inspect-mrkt-cap">---</div>
+                        </div>
+                        <div class="stat-row">
+                            <div>Total Supply:</div>
+                            <div id="inspect-supply">---</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="dashboard-col col-narrow">
+            <div id="market-overview" class="table-card">
+                <div class="top-table">
+                    <h3 class="table-caption">Global Market Metrics</h3>
+                </div>
+                <div class="stats-container">
+                    <div class="stat-row">
+                        <div>Total Market Cap:</div>
+                        <div id="market-cap">---</div>
+                    </div>
+                    <div class="stat-row">
+                        <div>Global Volume:</div>
+                        <div id="global-volume">---</div>
+                    </div>
+                    <div class="stat-row">
+                        <div>Bitcoin Dominance:</div>
+                        <div id="btc-dom">---</div>
+                    </div>
+                    <div class="stat-row">
+                        <div>Ethereum Dominance:</div>
+                        <div id="eth-dom">---</div>
+                    </div>
+                    <div class="stat-row">
+                        <div>Market Cap Change:</div>
+                        <div id="mcp-change">---</div>
+                    </div>
+                    <div class="stat-row">
+                        <div>Volume Change (24h):</div>
+                        <div id="volume-change">---</div>
+                    </div>
+                    <div class="stat-row">
+                        <div>Avg Price Change:</div>
+                        <div id="avg-change">---</div>
+                    </div>
+                    <div class="stat-row">
+                        <div>Active Coins:</div>
+                        <div id="active-coins">---</div>
+                    </div>
+                    <div class="stat-row">
+                        <div>Active Markets:</div>
+                        <div id="active-markets">---</div>
+                    </div>
+                    <div class="stat-row">
+                        <div>Market Cap ATH:</div>
+                        <div id="mcap-ath">---</div>
+                    </div>
+                    <div class="stat-row">
+                        <div>Volume ATH:</div>
+                        <div id="volume-ath">---</div>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <div class="dashboard-col col-narrow">
+
+            <div id="high-ticker" class="table-card">
+                <div class="top-table">
+                    <h4 class="table-caption">TOP 20 <span class="gainer-text">LEADERS</span> (24H)</h4>
+                </div>
+                <div class="table-wrap">
+                    <table class="coins-table">
+                        <thead>
+                            <tr>
+                                <th>Asset</th>
+                                <th>Price</th>
+                                <th>Volume</th>
+                                <th>24H%</th>
+                            </tr>
+                        </thead>
+                        <tbody id="gainers-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="low-ticker" class="table-card">
+                <div class="top-table">
+                    <h4 class="table-caption">TOP 20 <span class="loser-text">LOSERS</span> (24H)</h4>
+                </div>
+                <div class="table-wrap">
+                    <table class="coins-table">
+                        <thead>
+                            <tr>
+                                <th>Asset</th>
+                                <th>Price</th>
+                                <th>Volume</th>
+                                <th>24H%</th>
+                            </tr>
+                        </thead>
+                        <tbody id="losers-body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 
 
