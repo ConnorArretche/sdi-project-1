@@ -28,7 +28,8 @@ fetch("https://api.coinlore.net/api/global/")
     document.querySelector("#mcap-ath").innerText = `$${Number(coinData.mcap_ath).toLocaleString()}`
     document.querySelector("#volume-ath").innerText = `${Number(coinData.volume_ath).toLocaleString()}`
   });
-//Asset Profile Analytics
+
+  //Asset Profile Analytics
 function searchCoins(enteredSymbol){
     let symbolSearch = enteredSymbol.toUpperCase().trim();
     let foundAsset = coinMap.find(coin => coin.symbol === symbolSearch);
